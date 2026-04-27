@@ -1,6 +1,6 @@
 <h1 align="center"> FelipedelosH </h1>
 <br>
-<h4>Name of project</h4>
+<h4>MCP SERVER DEMO</h4>
 
 ![Banner](Docs/banner.png)
 <br>
