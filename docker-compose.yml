@@ -1,0 +1,8 @@
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: mcp-server/Dockerfile
+    container_name: rappi_mcp_stdio
+    stdin_open: true
+    tty: true

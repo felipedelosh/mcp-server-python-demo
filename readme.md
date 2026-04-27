@@ -16,21 +16,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 - `Function 3a`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
 - `Function 4`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
 
-
-# Before to Start
-
-## Install uv
-
-```
-python -m pip install uv
-```
-
-## Install depenencies via uv
-
-```
-uv pip install --system -r mcp-server/pyproject.toml
-```
-
 # Architecture
 
 ```
@@ -54,9 +39,10 @@ rappi_mcp_project/
 
 Double click
 
-## :hammer_and_wrench:Tech.
+## :hammer_and_wrench: Tech.
 
-- code programing
+- Python
+- Docker
 - framework
 
 ## :warning:Warning.
