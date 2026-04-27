@@ -9,6 +9,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
+from datetime import datetime
 
 load_dotenv()
 DB_CONFIG = {
