@@ -1,0 +1,12 @@
+[project]
+name = "rappi-mcp-server"
+version = "0.1.0"
+description = "Servidor MCP para el demo de gestión de usuarios y eventos en Rappi"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0,<2.0.0",
+    "psycopg2-binary>=2.9.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
