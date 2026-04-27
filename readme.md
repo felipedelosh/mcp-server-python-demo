@@ -83,6 +83,7 @@ You should receive a response like: "¡Hola, Claude!"
 ## :hammer_and_wrench: Tech.
 
 - Python 3.11+
+- uv
 - Docker & Docker Compose
 - MCP & FastMCP 
 - PostgreSQL
