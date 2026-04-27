@@ -4,5 +4,13 @@ services:
       context: .
       dockerfile: mcp-server/Dockerfile
     container_name: rappi_mcp_stdio
+    networks:
+      - redDemoMcp
+    env_file:
+      - .env
     stdin_open: true
     tty: true
+
+networks:
+  redDemoMcp:
+    external: true
