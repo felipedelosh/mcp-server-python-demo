@@ -15,11 +15,30 @@ This is the first step to build bigger tools, like managing users or points.
 
 ## :hammer:Funtions:
 
-- `Function 1`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 2`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 3`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 3a`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 4`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
+The MCP server exposes the following tools that Claude Desktop can invoke:
+
+1. **`saludar(nombre: str = "mundo") -> str`**  
+   Returns a greeting message: `"¡Hola, {nombre}!"`. Useful for testing the connection.
+
+2. **`test_db_connection() -> dict`**  
+   Tests the database connection and returns the list of tables in the `public` schema.  
+   Returns `success: true/false`, database name, host, and the list of tables (if successful).
+
+3. **`crear_usuario(nombre: str, email: str, phone: str = None, rappi_id: str = None) -> dict`**  
+   Inserts a new user into the `users` table. Returns `exito: true` and the created user data, or an error message if the email already exists.
+
+4. **`listar_usuarios(limite: int = 10) -> list`**  
+   Retrieves the most recent users (up to `limite`) from the `users` table, ordered by ID descending. Returns a list of user dictionaries.
+
+5. **`acumular_puntos(user_id: int, points: int) -> dict`**  
+   Adds points to a user's accumulation record (`event_accumulations`).  
+   - If the user exists and points are positive, it creates an accumulation record and an `OK` event in `events`.  
+   - Otherwise, it returns an error and rolls back the transaction.
+
+6. **`redimir_puntos(user_id: int, points: int) -> dict`**  
+   Redeems points from a user (`event_redeems`).  
+   - Similar to accumulation: checks user existence, inserts a redemption record, and creates an `OK` event.  
+   - Returns success or error details.
 
 # Architecture
 
